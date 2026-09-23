@@ -279,4 +279,77 @@
 /* ---------- Optional half-size mode ---------- */
 .custom.half {
     margin-top: -300px;
+
+/* ==========================================================
+   ONIMUSHA - AJUSTES DE POSIÇÃO
+   ========================================================== */
+
+/* ---------- FACE BUTTONS ---------- */
+
+/* TRIÂNGULO */
+.custom .y {
+    transform: translate(6px, -11px);
+}
+
+/* QUADRADO */
+.custom .x {
+    transform: translate(13px, -11px);
+}
+
+/* BOLA */
+.custom .b {
+    transform: translate(7px, -11px);
+}
+
+/* X */
+.custom .a {
+    transform: translate(6px, -4px);
+}
+
+
+/* ==========================================================
+   ANALÓGICOS - MOVIMENTO
+   ========================================================== */
+
+/*
+   O Gamepad Viewer move .stick através de transform
+   conforme os eixos X/Y do analógico.
+
+   Antes estava opacity: 0, então só L3/R3 aparecia.
+*/
+
+.custom .stick {
+    opacity: 0.35 !important;
+
+    background: radial-gradient(
+        circle,
+        rgba(210, 20, 20, 0.65) 0%,
+        rgba(210, 20, 20, 0.65) 32%,
+        rgba(218, 160, 60, 0.95) 33%,
+        rgba(218, 160, 60, 0.95) 40%,
+        rgba(0, 0, 0, 0) 41%
+    ) !important;
+
+    box-shadow:
+        0 0 12px rgba(220, 20, 20, 0.55),
+        inset 0 0 8px rgba(218, 160, 60, 0.35);
+}
+
+/* Quando apertar L3/R3 */
+.custom .stick.pressed {
+    opacity: 1 !important;
+
+    background: radial-gradient(
+        circle,
+        rgba(220, 20, 20, 0.9) 0%,
+        rgba(220, 20, 20, 0.9) 32%,
+        rgba(240, 180, 70, 1) 33%,
+        rgba(240, 180, 70, 1) 42%,
+        rgba(0, 0, 0, 0) 43%
+    ) !important;
+
+    box-shadow:
+        0 0 20px rgba(220, 20, 20, 0.8),
+        inset 0 0 12px rgba(218, 160, 60, 0.5);
+}   
 }
