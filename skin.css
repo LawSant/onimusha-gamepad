@@ -1,0 +1,282 @@
+/* ==========================================================
+   ONIMUSHA x MIYAMOTO MUSASHI
+   Custom PS4 / DualShock 4 skin for Gamepad Viewer
+   Base artwork: controller.png (806x598)
+   ========================================================== */
+
+/* ---------- Controller base ---------- */
+.controller.custom {
+    width: 806px;
+    height: 598px;
+    background: url("controller.png") no-repeat 0 0 !important;
+    background-size: 806px 598px !important;
+}
+
+/* ---------- Hide the default GPV artwork ---------- */
+/* The Photoshop artwork already contains the buttons, sticks,
+   D-pad, touchpad and trigger pieces. We only show an overlay
+   when an input is pressed. */
+
+.custom .trigger,
+.custom .bumper,
+.custom .button,
+.custom .face,
+.custom .stick,
+.custom .touchpad,
+.custom .meta {
+    background-image: none !important;
+}
+
+/* ---------- L2 / R2 ---------- */
+.custom .triggers {
+    width: 588px;
+    height: 90px;
+    position: absolute;
+    left: 109px;
+}
+
+.custom .trigger {
+    width: 99px;
+    height: 100%;
+    opacity: 0;
+    box-sizing: border-box;
+    border-radius: 22px;
+    background: rgba(180, 20, 20, .24) !important;
+    border: 2px solid rgba(218, 160, 60, .75);
+    box-shadow: 0 0 18px rgba(220, 20, 20, .45),
+                inset 0 0 18px rgba(220, 20, 20, .30);
+}
+
+.custom .trigger.left { float: left; }
+.custom .trigger.right { float: right; }
+
+.custom .trigger.pressed {
+    opacity: 1;
+}
+
+/* ---------- L1 / R1 ---------- */
+.custom .bumpers {
+    position: absolute;
+    width: 588px;
+    height: 23px;
+    left: 109px;
+    top: 94px;
+}
+
+.custom .bumper {
+    width: 99px;
+    height: 23px;
+    opacity: 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: rgba(180, 20, 20, .35) !important;
+    border: 1px solid rgba(218, 160, 60, .85);
+    box-shadow: 0 0 14px rgba(220, 20, 20, .55);
+}
+
+.custom .bumper.left { float: left; }
+.custom .bumper.right { float: right; }
+
+.custom .bumper.pressed {
+    opacity: 1;
+}
+
+/* ---------- Touchpad ---------- */
+.custom .touchpad {
+    width: 262px;
+    height: 151px;
+    position: absolute;
+    left: 272px;
+    top: 122px;
+    box-sizing: border-box;
+    opacity: 0;
+    border: 2px solid rgba(218, 160, 60, .9);
+    border-radius: 8px;
+    background: rgba(150, 10, 10, .18) !important;
+    box-shadow: 0 0 22px rgba(210, 20, 20, .45),
+                inset 0 0 25px rgba(210, 20, 20, .22);
+}
+
+.custom .touchpad.pressed {
+    opacity: 1;
+}
+
+/* ---------- SHARE / OPTIONS ---------- */
+.custom .arrows {
+    position: absolute;
+    width: 352px;
+    height: 46px;
+    top: 142px;
+    left: 227px;
+}
+
+.custom .back,
+.custom .start {
+    width: 28px;
+    height: 46px;
+    opacity: 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background: rgba(180, 20, 20, .32) !important;
+    border: 1px solid rgba(218, 160, 60, .85);
+    box-shadow: 0 0 12px rgba(220, 20, 20, .45);
+}
+
+.custom .back { float: left; }
+.custom .start { float: right; }
+
+.custom .back.pressed,
+.custom .start.pressed {
+    opacity: 1;
+}
+
+/* ---------- Face buttons: Triangle / Circle / Cross / Square ---------- */
+.custom .abxy {
+    position: absolute;
+    width: 170px;
+    height: 171px;
+    top: 159px;
+    left: 567px;
+}
+
+.custom .button {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    opacity: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: rgba(180, 20, 20, .38) !important;
+    border: 2px solid rgba(218, 160, 60, .95);
+    box-shadow: 0 0 15px rgba(220, 20, 20, .55),
+                inset 0 0 10px rgba(0, 0, 0, .45);
+}
+
+.custom .button.pressed {
+    opacity: 1;
+}
+
+.custom .a { bottom: 0; left: 58px; }
+.custom .b { top: 58px; right: 0; }
+.custom .x { top: 58px; left: 0; }
+.custom .y { top: 0; left: 58px; }
+
+/* ---------- Analog sticks ---------- */
+.custom .sticks {
+    position: absolute;
+    width: 361px;
+    height: 105px;
+    top: 308px;
+    left: 228px;
+}
+
+.custom .stick {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    opacity: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        rgba(210, 20, 20, .45) 0 35%,
+        rgba(218, 160, 60, .85) 36% 40%,
+        rgba(0, 0, 0, 0) 41%) !important;
+    box-shadow: 0 0 16px rgba(220, 20, 20, .55);
+}
+
+.custom .stick.left {
+    top: 0;
+    left: 0;
+}
+
+.custom .stick.right {
+    top: calc(100% - 105px);
+    left: calc(100% - 105px);
+}
+
+.custom .stick.pressed {
+    opacity: 1;
+}
+
+/* ---------- D-pad ---------- */
+.custom .dpad {
+    position: absolute;
+    width: 125px;
+    height: 126px;
+    top: 181px;
+    left: 92px;
+}
+
+.custom .face {
+    position: absolute;
+    opacity: 0;
+    box-sizing: border-box;
+    background: rgba(180, 20, 20, .40) !important;
+    border: 1px solid rgba(218, 160, 60, .9);
+    box-shadow: 0 0 12px rgba(220, 20, 20, .50);
+}
+
+.custom .face.up,
+.custom .face.down {
+    width: 36px;
+    height: 52px;
+}
+
+.custom .face.left,
+.custom .face.right {
+    width: 52px;
+    height: 36px;
+}
+
+.custom .face.up {
+    left: 44px;
+    top: 0;
+}
+
+.custom .face.down {
+    left: 44px;
+    bottom: 0;
+}
+
+.custom .face.left {
+    top: 45px;
+    left: 0;
+}
+
+.custom .face.right {
+    top: 45px;
+    right: 0;
+}
+
+.custom .face.pressed {
+    opacity: 1;
+}
+
+/* ---------- PS button ---------- */
+.custom .meta {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 382px;
+    bottom: 216px;
+    opacity: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid rgba(218, 160, 60, .95);
+    background: rgba(180, 20, 20, .35) !important;
+    box-shadow: 0 0 18px rgba(220, 20, 20, .65);
+}
+
+.custom .meta.pressed {
+    opacity: 1;
+}
+
+/* ---------- Disconnect ---------- */
+.custom.disconnected div {
+    display: none;
+}
+
+/* ---------- Optional half-size mode ---------- */
+.custom.half {
+    margin-top: -300px;
+}
